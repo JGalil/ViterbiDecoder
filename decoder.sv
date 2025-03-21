@@ -462,38 +462,61 @@ module decoder
 */
 
 // Display memory module operation
-   always @ (posedge clk)
+   always @ (posedge clk) begin
       mem_bank_Q3 <= mem_bank_Q2[0];
+   end
 
-   always @ (posedge clk)
+   always @ (posedge clk) begin
       if(!rst)
          wr_mem_counter_disp  <= 10'b0000000010;
       else if(!enable)
          wr_mem_counter_disp  <= 10'b0000000010;
       else
+         wr_mem_counter_disp <= wr_mem_counter_disp - 10'd1;
 //       decrement wr_mem_counter_disp    
+   end
 
-   always @ (posedge clk)
+   always @ (posedge clk) begin
       if(!rst)
          rd_mem_counter_disp  <= 10'b1111111101;
       else if(!enable)
          rd_mem_counter_disp  <= 10'b1111111101;
       else
+         rd_mem_counter_disp <= rd_mem_counter_disp + 10'd1;
 // increment    rd_mem_counter_disp     
+   end
    
-   always @ (posedge clk)
+   always @ (posedge clk) begin
+
       // if !mem_bank_Q3
-         begin
+         if(!mem_bank_Q3)
+         
             addr_disp_mem_0   <= rd_mem_counter_disp; 
             addr_disp_mem_1   <= wr_mem_counter_disp;
-         end
-     //  else:	 swap rd and wr 
-      endcase
+   
+     //  else:	 swap rd and wr
+         else
+            addr_disp_mem_0 <= wr_mem_counter_disp;
+            addr_disp_mem_1 <= rd_mem_counter_disp; 
+   end
 
-   always @ (posedge clk) 	 
+   always @ (posedge clk) 	 begin
 /* pipeline mem_bank_Q3 to Q4 to Q5
  also  d_out = d_o_disp_mem_i 
     i = mem_bank_Q5 
 */
+      mem_bank_Q4 <= mem_bank_Q3;
+   end
+
+   always @ (posedge clk) begin
+      mem_bank_Q5 <= mem_bank_Q4;
+   end
+
+   always @ (posedge clk) begin
+      if(!mem_bank_Q5)
+         d_out <= d_o_disp_mem_i;
+      else
+         d_out <= d_o_disp_mem_1;
+   end
 
 endmodule
