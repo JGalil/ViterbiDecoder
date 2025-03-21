@@ -1,0 +1,412 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/kbn73/Downloads
+vACS
+Z0 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z1 !s110 1742529985
+!i10b 1
+!s100 UNX[mlDbDnd3G:D@LSe]S3
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+Ib[>9hDBo[7i7:B2odEIoH2
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+S1
+Z4 dC:/Users/kbn73/OneDrive/Documents/ViterbiDecoder
+Z5 w1742521573
+8C:/Users/kbn73/OneDrive/Documents/ViterbiDecoder/ACS.sv
+FC:/Users/kbn73/OneDrive/Documents/ViterbiDecoder/ACS.sv
+!i122 0
+L0 1 39
+Z6 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z7 !s108 1742529985.000000
+!s107 C:/Users/kbn73/OneDrive/Documents/ViterbiDecoder/ACS.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/kbn73/OneDrive/Documents/ViterbiDecoder/ACS.sv|
+!i113 1
+Z8 o-work work -sv
+Z9 tCvgOpt 0
+n@a@c@s
+vbmc0
+R0
+R1
+!i10b 1
+!s100 [cFO5MOdIUI6d=X=?Y]_U2
+R2
+IE=1GH_6_LmK=GP>_@K2KF3
+R3
+S1
+R4
+Z10 w1742529183
+Z11 8C:/Users/kbn73/OneDrive/Documents/ViterbiDecoder/bmc0.sv
+Z12 FC:/Users/kbn73/OneDrive/Documents/ViterbiDecoder/bmc0.sv
+!i122 1
+L0 6 16
+R6
+r1
+!s85 0
+31
+R7
+Z13 !s107 C:/Users/kbn73/OneDrive/Documents/ViterbiDecoder/bmc0.sv|
+Z14 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/kbn73/OneDrive/Documents/ViterbiDecoder/bmc0.sv|
+!i113 1
+R8
+R9
+vbmc1
+R0
+R1
+!i10b 1
+!s100 m3jg:cM_91mJJ[OjH^ilb3
+R2
+I899h0CM_@WRe62ZQ9fQWC0
+R3
+S1
+R4
+R10
+R11
+R12
+!i122 1
+L0 23 16
+R6
+r1
+!s85 0
+31
+R7
+R13
+R14
+!i113 1
+R8
+R9
+vbmc2
+R0
+R1
+!i10b 1
+!s100 F3h<@bRojHEl[9U]3Q2MI2
+R2
+IE`R_d=HKLCLl^kM_45KRQ2
+R3
+S1
+R4
+R10
+R11
+R12
+!i122 1
+L0 40 16
+R6
+r1
+!s85 0
+31
+R7
+R13
+R14
+!i113 1
+R8
+R9
+vbmc3
+R0
+R1
+!i10b 1
+!s100 EPKJU;X]]EZ4[JT<LOB@h3
+R2
+IUQC5R?PUiC7Z7XmO0jKGO1
+R3
+S1
+R4
+R10
+R11
+R12
+!i122 1
+L0 57 16
+R6
+r1
+!s85 0
+31
+R7
+R13
+R14
+!i113 1
+R8
+R9
+vbmc4
+R0
+R1
+!i10b 1
+!s100 U`i0iohncVSS9DF5elJz:1
+R2
+IYCPl`E1`ie8^3?VT_aJo62
+R3
+S1
+R4
+R10
+R11
+R12
+!i122 1
+L0 74 16
+R6
+r1
+!s85 0
+31
+R7
+R13
+R14
+!i113 1
+R8
+R9
+vbmc5
+R0
+R1
+!i10b 1
+!s100 a?fc9`JklB>S@MBHj>b[=3
+R2
+IeRJj84P[HGOi@j5LbkRg^0
+R3
+S1
+R4
+R10
+R11
+R12
+!i122 1
+L0 91 16
+R6
+r1
+!s85 0
+31
+R7
+R13
+R14
+!i113 1
+R8
+R9
+vbmc6
+R0
+R1
+!i10b 1
+!s100 dMFe0jYeETEDXCHYdGF;M1
+R2
+IQ3GgGBbezC[NXQNKJ8h;f2
+R3
+S1
+R4
+R10
+R11
+R12
+!i122 1
+L0 108 16
+R6
+r1
+!s85 0
+31
+R7
+R13
+R14
+!i113 1
+R8
+R9
+vbmc7
+R0
+R1
+!i10b 1
+!s100 g<^d9LF[z8B45F^MAB2z>0
+R2
+Im3>3fZPzl^M2S:4QS7o@80
+R3
+S1
+R4
+R10
+R11
+R12
+!i122 1
+L0 125 16
+R6
+r1
+!s85 0
+31
+R7
+R13
+R14
+!i113 1
+R8
+R9
+vdecoder
+R0
+R1
+!i10b 1
+!s100 XA4Xaaa`:YGCC6247VH^[0
+R2
+Ijk@HhkAcaLzJ3_gEj4ocG3
+R3
+S1
+R4
+w1742528438
+8C:/Users/kbn73/OneDrive/Documents/ViterbiDecoder/decoder.sv
+FC:/Users/kbn73/OneDrive/Documents/ViterbiDecoder/decoder.sv
+!i122 2
+L0 1 529
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/Users/kbn73/OneDrive/Documents/ViterbiDecoder/decoder.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/kbn73/OneDrive/Documents/ViterbiDecoder/decoder.sv|
+!i113 1
+R8
+R9
+vencoder_tb
+R0
+R1
+!i10b 1
+!s100 `]GiUaIaC`K^<g7n_M1951
+R2
+I[oQFb383;OKdg<<R3>Sl[1
+R3
+S1
+R4
+R5
+8C:/Users/kbn73/OneDrive/Documents/ViterbiDecoder/encoder_tb.sv
+FC:/Users/kbn73/OneDrive/Documents/ViterbiDecoder/encoder_tb.sv
+!i122 3
+L0 1 65
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/Users/kbn73/OneDrive/Documents/ViterbiDecoder/encoder_tb.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/kbn73/OneDrive/Documents/ViterbiDecoder/encoder_tb.sv|
+!i113 1
+R8
+R9
+vmem
+R0
+Z15 !s110 1742529986
+!i10b 1
+!s100 5G0JRTWZk?>[AaahKRnH22
+R2
+IORIckWhDh`5?Ve9:AX7`H2
+R3
+S1
+R4
+R5
+8C:/Users/kbn73/OneDrive/Documents/ViterbiDecoder/mem_8x1024.sv
+FC:/Users/kbn73/OneDrive/Documents/ViterbiDecoder/mem_8x1024.sv
+!i122 5
+L0 3 22
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/Users/kbn73/OneDrive/Documents/ViterbiDecoder/mem_8x1024.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/kbn73/OneDrive/Documents/ViterbiDecoder/mem_8x1024.sv|
+!i113 1
+R8
+R9
+vmem_disp
+R0
+R1
+!i10b 1
+!s100 hGAg[8R1WJF:RK6[mZ97g3
+R2
+IInCd_ffh15AIm1bHSHJO@1
+R3
+S1
+R4
+R5
+8C:/Users/kbn73/OneDrive/Documents/ViterbiDecoder/mem_1x1024.sv
+FC:/Users/kbn73/OneDrive/Documents/ViterbiDecoder/mem_1x1024.sv
+!i122 4
+L0 1 15
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/Users/kbn73/OneDrive/Documents/ViterbiDecoder/mem_1x1024.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/kbn73/OneDrive/Documents/ViterbiDecoder/mem_1x1024.sv|
+!i113 1
+R8
+R9
+vtbu
+R0
+R15
+!i10b 1
+!s100 Xf]5eg>JH`F1BC[LnUmU]1
+R2
+I9nOGYWTU0ii4LG]Gad3m33
+R3
+S1
+R4
+R5
+8C:/Users/kbn73/OneDrive/Documents/ViterbiDecoder/tbu.sv
+FC:/Users/kbn73/OneDrive/Documents/ViterbiDecoder/tbu.sv
+!i122 6
+L0 2 42
+R6
+r1
+!s85 0
+31
+Z16 !s108 1742529986.000000
+!s107 C:/Users/kbn73/OneDrive/Documents/ViterbiDecoder/tbu.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/kbn73/OneDrive/Documents/ViterbiDecoder/tbu.sv|
+!i113 1
+R8
+R9
+vviterbi_tx_rx
+R0
+R15
+!i10b 1
+!s100 Nk[`cN[TDCkGbHln22dBG2
+R2
+IG8laD9QaJHmK07HiL?LTi0
+R3
+S1
+R4
+R5
+8C:/Users/kbn73/OneDrive/Documents/ViterbiDecoder/viterbi_tx_rx2.sv
+FC:/Users/kbn73/OneDrive/Documents/ViterbiDecoder/viterbi_tx_rx2.sv
+!i122 8
+L0 6 81
+R6
+r1
+!s85 0
+31
+R16
+!s107 C:/Users/kbn73/OneDrive/Documents/ViterbiDecoder/viterbi_tx_rx2.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/kbn73/OneDrive/Documents/ViterbiDecoder/viterbi_tx_rx2.sv|
+!i113 1
+R8
+R9
+vviterbi_tx_rx_tb
+R0
+R15
+!i10b 1
+!s100 mkZn[BH1:czPVC[U^:hX03
+R2
+Io5ge>Y27=IjHS0ka1UNZ?0
+R3
+S1
+R4
+R5
+8C:/Users/kbn73/OneDrive/Documents/ViterbiDecoder/viterbi_tx_rx_tb.sv
+FC:/Users/kbn73/OneDrive/Documents/ViterbiDecoder/viterbi_tx_rx_tb.sv
+!i122 7
+L0 2 93
+R6
+r1
+!s85 0
+31
+R16
+!s107 C:/Users/kbn73/OneDrive/Documents/ViterbiDecoder/viterbi_tx_rx_tb.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/kbn73/OneDrive/Documents/ViterbiDecoder/viterbi_tx_rx_tb.sv|
+!i113 1
+R8
+R9

@@ -18,6 +18,78 @@ module encoder                    // use this one
       valid_o  =   enable_i;
       case (cstate)
 // fill in the guts
+      3'b000:
+      begin
+         if(d_in==1'b0)
+            nstate = 3'b000;
+            d_out_reg = 2'b00;
+         else
+            nstate = 3'b100;
+            d_out_reg = 2'b11;
+      end
+      3'b001:
+      begin
+         if(d_in==1'b0)
+            nstate = 3'b100;
+            d_out_reg = 2'b00;
+         else
+            nstate = 3'b000;
+            d_out_reg = 2'b11;
+      end
+      3'b010:
+      begin
+         if(d_in==1'b0)
+            nstate = 3'b101;
+            d_out_reg = 2'b10;
+         else
+            nstate = 3'b001;
+            d_out_reg = 2'b01;
+      end
+      3'b011:
+      begin
+         if(d_in==1'b0)
+            nstate = 3'b001;
+            d_out_reg = 2'b10;
+         else
+            nstate = 3'b101;
+            d_out_reg = 2'b01;
+      end
+      3'b100:
+      begin
+         if(d_in==1'b0)
+            nstate = 3'b010;
+            d_out_reg = 2'b10;
+         else
+            nstate = 3'b110;
+            d_out_reg = 2'b01;
+      end
+      3'b101:
+      begin
+         if(d_in==1'b0)
+            nstate = 3'b110;
+            d_out_reg = 2'b10;
+         else
+            nstate = 3'b010;
+            d_out_reg = 2'b01;
+      end
+      3'b110:
+      begin
+         if(d_in==1'b0)
+            nstate = 3'b111;
+            d_out_reg = 2'b00;
+         else
+            nstate = 3'b011;
+            d_out_reg = 2'b11;
+      end
+      3'b111:
+      begin
+         if(d_in==1'b0)
+            nstate = 3'b011;
+            d_out_reg = 2'b00;
+         else
+            nstate = 3'b111;
+            d_out_reg = 2'b11;
+      end
       endcase
    end								   
 
