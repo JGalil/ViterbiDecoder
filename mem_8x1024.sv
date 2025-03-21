@@ -4,8 +4,8 @@ module mem					(
    input                  clk,
    input                  wr, // write enable
    input         [9:0]    addr,
-   input                  d_i,		// data
-   output logic           d_o);
+   input         [7:0]         d_i,		// data
+   output logic  [7:0]         d_o);
 // memory core itself
    logic [7:0] mem [1024];
 

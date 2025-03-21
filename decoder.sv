@@ -314,7 +314,7 @@ module decoder
 
    mem trelis_mem_A
    (
-      .clk,
+      .clk(clk),
       .wr(wr_mem_A),
       .addr(addr_mem_A),
       .d_i(d_in_mem_A),
@@ -323,7 +323,7 @@ module decoder
 
    mem trelis_mem_B
    (
-      .clk,
+      .clk(clk),
       .wr(wr_mem_B),
       .addr(addr_mem_B),
       .d_i(d_in_mem_B),
@@ -332,7 +332,7 @@ module decoder
 
    mem trelis_mem_C
    (
-      .clk,
+      .clk(clk),
       .wr(wr_mem_C),
       .addr(addr_mem_C),
       .d_i(d_in_mem_C),
@@ -341,7 +341,7 @@ module decoder
 
    mem trelis_mem_D
    (
-      .clk,
+      .clk(clk),
       .wr(wr_mem_D),
       .addr(addr_mem_D),
       .d_i(d_in_mem_D),

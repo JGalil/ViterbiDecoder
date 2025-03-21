@@ -1,23 +1,16 @@
-C:/Users/kbn73/OneDrive/Documents/ViterbiDecoder/viterbi_tx_rx_tb.sv {1 {vlog -work work -sv -stats=none C:/Users/kbn73/OneDrive/Documents/ViterbiDecoder/viterbi_tx_rx_tb.sv
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module viterbi_tx_rx_tb
-
-Top level modules:
-	viterbi_tx_rx_tb
-
-} {} {}} C:/Users/kbn73/OneDrive/Documents/ViterbiDecoder/mem_1x1024.sv {1 {vlog -work work -sv -stats=none C:/Users/kbn73/OneDrive/Documents/ViterbiDecoder/mem_1x1024.sv
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module mem_disp
-
-Top level modules:
-	mem_disp
-
-} {} {}} C:/Users/kbn73/OneDrive/Documents/ViterbiDecoder/decoder.sv {1 {vlog -work work -sv -stats=none C:/Users/kbn73/OneDrive/Documents/ViterbiDecoder/decoder.sv
+C:/Users/kbn73/OneDrive/Documents/ViterbiDecoder/decoder.sv {1 {vlog -work work -sv -stats=none C:/Users/kbn73/OneDrive/Documents/ViterbiDecoder/decoder.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module decoder
 
 Top level modules:
 	decoder
+
+} {} {}} C:/Users/kbn73/OneDrive/Documents/ViterbiDecoder/viterbi_tx_rx_tb.sv {1 {vlog -work work -sv -stats=none C:/Users/kbn73/OneDrive/Documents/ViterbiDecoder/viterbi_tx_rx_tb.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module viterbi_tx_rx_tb
+
+Top level modules:
+	viterbi_tx_rx_tb
 
 } {} {}} C:/Users/kbn73/OneDrive/Documents/ViterbiDecoder/bmc0.sv {1 {vlog -work work -sv -stats=none C:/Users/kbn73/OneDrive/Documents/ViterbiDecoder/bmc0.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
@@ -40,6 +33,20 @@ Top level modules:
 	bmc6
 	bmc7
 
+} {} {}} C:/Users/kbn73/OneDrive/Documents/ViterbiDecoder/mem_1x1024.sv {1 {vlog -work work -sv -stats=none C:/Users/kbn73/OneDrive/Documents/ViterbiDecoder/mem_1x1024.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module mem_disp
+
+Top level modules:
+	mem_disp
+
+} {} {}} C:/Users/kbn73/OneDrive/Documents/ViterbiDecoder/viterbi_tx_rx2.sv {1 {vlog -work work -sv -stats=none C:/Users/kbn73/OneDrive/Documents/ViterbiDecoder/viterbi_tx_rx2.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module viterbi_tx_rx
+
+Top level modules:
+	viterbi_tx_rx
+
 } {} {}} C:/Users/kbn73/OneDrive/Documents/ViterbiDecoder/tbu.sv {1 {vlog -work work -sv -stats=none C:/Users/kbn73/OneDrive/Documents/ViterbiDecoder/tbu.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module tbu
@@ -47,14 +54,7 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 Top level modules:
 	tbu
 
-} {} {}} C:/Users/kbn73/OneDrive/Documents/ViterbiDecoder/ACS.sv {1 {vlog -work work -sv -stats=none C:/Users/kbn73/OneDrive/Documents/ViterbiDecoder/ACS.sv
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module ACS
-
-Top level modules:
-	ACS
-
-} {} {}} C:/Users/kbn73/OneDrive/Documents/ViterbiDecoder/encoder.sv {1 {vlog -work work -sv -stats=none {C:\Users\kbn73\OneDrive\Documents\ViterbiDecoder\encoder.sv}
+} {} {}} C:/Users/kbn73/OneDrive/Documents/ViterbiDecoder/encoder.sv {1 {vlog -work work -sv -stats=none C:/Users/kbn73/OneDrive/Documents/ViterbiDecoder/encoder.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module encoder
 

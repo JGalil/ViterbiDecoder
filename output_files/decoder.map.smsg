@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at decoder.sv(163): always construct contains both blocking and non-blocking assignments File: C:/Users/kbn73/OneDrive/Documents/ViterbiDecoder/decoder.sv Line: 163
