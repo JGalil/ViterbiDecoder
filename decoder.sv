@@ -234,6 +234,7 @@ module decoder
          mem_bank <= 2'b0;
       else begin
          /*if(wr_mem_counter = -1  fill in the guts*/
+         if(wr_mem_counter == -1)
                mem_bank <= mem_bank + 2'b1;
       end
 
@@ -249,7 +250,6 @@ module decoder
       wr_mem_B <= 0;
       wr_mem_C <= 0;
       wr_mem_D <= 0;
-
       case(mem_bank)
          2'b00:         begin
             addr_mem_A        <= wr_mem_counter;
@@ -258,6 +258,10 @@ module decoder
             addr_mem_D        <= rd_mem_counter;
 
             wr_mem_A          <= 1'b1;
+            
+            wr_mem_B <= 0;
+            wr_mem_C <= 0;
+            wr_mem_D <= 0;
 /* other wr_mems = 0
 */	        
          end
@@ -268,6 +272,10 @@ module decoder
             addr_mem_D        <= 10'd0;
 
             wr_mem_B          <= 1'b1;
+
+            wr_mem_A <= 0;
+            wr_mem_C <= 0;
+            wr_mem_D <= 0;
 /* other wr_mems = 0
 */	        
          end		       
@@ -278,6 +286,10 @@ module decoder
             addr_mem_D        <= rd_mem_counter;
 
             wr_mem_C       <= 1'b1;
+
+            wr_mem_A <= 0;
+            wr_mem_B <= 0;
+            wr_mem_D <= 0;
 /* other wr_mems = 0
 */	        
          end
@@ -288,6 +300,10 @@ module decoder
             addr_mem_D        <= wr_mem_counter;
 
             wr_mem_D       <= 1'b1;
+
+            wr_mem_A <= 0;
+            wr_mem_B <= 0;
+            wr_mem_C <= 0;
 /* other wr_mems = 0
 */	        
          end		       
@@ -296,7 +312,7 @@ module decoder
 
 //Trelis memory module instantiation
 
-   mem   trelis_mem_A
+   mem trelis_mem_A
    (
       .clk,
       .wr(wr_mem_A),
@@ -304,12 +320,40 @@ module decoder
       .d_i(d_in_mem_A),
       .d_o(d_o_mem_A)
    );
+
+   mem trelis_mem_B
+   (
+      .clk,
+      .wr(wr_mem_B),
+      .addr(addr_mem_B),
+      .d_i(d_in_mem_B),
+      .d_o(d_o_mem_B)
+   );
+
+   mem trelis_mem_C
+   (
+      .clk,
+      .wr(wr_mem_C),
+      .addr(addr_mem_C),
+      .d_i(d_in_mem_C),
+      .d_o(d_o_mem_C)
+   );
+
+   mem trelis_mem_D
+   (
+      .clk,
+      .wr(wr_mem_D),
+      .addr(addr_mem_D),
+      .d_i(d_in_mem_D),
+      .d_o(d_o_mem_D)
+   );
 /* likewise for trelis_memB, C, D
 */
 
 //Trace back module operation
 
    always @(posedge clk)
+         
 /* create mem_bank, mem_bank_Q1, mem_bank_Q2 pipeline */
 
    always @ (posedge clk, negedge rst)
@@ -382,18 +426,37 @@ module decoder
       .wr_en(wr_disp_mem_0)
    );
 
+   tbu tbu_1   (
+      .clk,
+      .rst,
+      .enable(enable_tbu_1),
+      .selection(selection_tbu_1),
+      .d_in_0(d_in_0_tbu_1),
+      .d_in_1(d_in_1_tbu_1),
+      .d_o(d_o_tbu_1),
+      .wr_en(wr_disp_mem_1)
+   );
+
 /* analogous for tbu_1
 */
 
 //Display Memory modules Instantioation
 //   d_in_disp_mem_K   =  d_o_tbu_K;  K=0,1
 
-  mem_disp   disp_mem_0	  (
+  mem_disp   disp_mem_0(
       .clk              ,
       .wr(wr_disp_mem_0),
       .addr(addr_disp_mem_0),
       .d_i(d_in_disp_mem_0),
       .d_o(d_o_disp_mem_0)
+   );
+
+   mem_disp   disp_mem_1(
+      .clk              ,
+      .wr(wr_disp_mem_1),
+      .addr(addr_disp_mem_1),
+      .d_i(d_in_disp_mem_1),
+      .d_o(d_o_disp_mem_1)
    );
 /* analogous for disp_mem_1
 */
