@@ -59,7 +59,7 @@ module decoder
 
 //Trelis memory write operation, pipeline delay
    logic   [1:0]       mem_bank;
-   logic   [1:0]       mem_bank_Q;
+   logic   [1:0]       mem_bank_Q1;
    logic   [1:0]       mem_bank_Q2;
    logic               mem_bank_Q3;
    logic               mem_bank_Q4;
@@ -523,7 +523,7 @@ module decoder
       if(!mem_bank_Q5)
          d_out <= d_o_disp_mem_0;
       else
-         d_out <= d_o_disp_mem_i;
+         d_out <= d_o_disp_mem_1;
    end
 
 endmodule
