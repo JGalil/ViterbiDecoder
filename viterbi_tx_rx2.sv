@@ -28,7 +28,7 @@ module viterbi_tx_rx #(parameter N=6) (
       if(!rst) begin  
 	  $display("viterbi_tx_rx2.sv");
       error_counter        <= 'd0;
-//		 error_counterQ       <= 'd0;
+		 error_counterQ       <= 'd0;
          encoder_o_reg        <= 'b0;		 
 		 encoder_o_reg0       <= 'b0;
          enable_decoder_in    <= 'b0;
@@ -38,14 +38,14 @@ module viterbi_tx_rx #(parameter N=6) (
       else begin 
          enable_encoder_i_reg <= enable_encoder_i;  
          enable_decoder_in    <= valid_encoder_o; 
-//         encoder_o_reg        <= 'b0;
+         encoder_o_reg        <= 'b0;
 // word_ct[N-1:0] generates strings of 2**N consecutive errors
-         if(word_ct[0]) error_counter        <= $random;
+         if(word_ct[0]) error_counter        <= 16'hABCD;
          word_ct              <= word_ct + 1;			
 // bit error injection in encoder_o_reg        					           					           
          encoder_i_reg     <= encoder_i;
          encoder_o_reg0    <= encoder_o;
-//	     error_counterQ    <= error_counter;
+	     error_counterQ    <= error_counter;
 //  N controls average rate of error injection
          if(error_counter[N-1:0]=='1) begin //
 // error_counter injection can flip one or both bits in a sample, or none (25% of the time)

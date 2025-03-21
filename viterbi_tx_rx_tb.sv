@@ -31,7 +31,7 @@ module viterbi_tx_rx_tb();
    end
 
    initial begin   
-	 #410500;//#410400;
+	 #410600;//#410400;
 	 forever @(posedge clk) begin
 	   dec_o_hist[k] <= decoder_o;
 	   k<=k+1;
