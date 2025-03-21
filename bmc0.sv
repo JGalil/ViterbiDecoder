@@ -11,10 +11,10 @@ module bmc0		  // branch metric computation
 
 /* Fill in the guts per BMC instructions
 */
-   logic tmp00 = (rx_pair[0] ^ 1'b0);
-   logic tmp01 = (rx_pair[1] ^ 1'b0);
-   logic tmp10 = !tmp00;
-   logic tmp11 = !tmp01;
+   assign  tmp00 = rx_pair[0] ^ 1'b0;
+   assign  tmp01 = rx_pair[1] ^ 1'b0;
+   assign  tmp10 = !tmp00;
+   assign  tmp11 = !tmp01;
 
    assign path_0_bmc = {tmp00 ^ tmp01, tmp00 & tmp01};
    assign path_1_bmc = {tmp10 ^ tmp11, tmp10 & tmp11};
@@ -28,10 +28,10 @@ module bmc1		  // branch metric computation, inverted rx pair
 
 /* Fill in the guts per BMC instructions
 */
-   logic tmp00 = rx_pair[0];
-   logic tmp01 = !rx_pair[1];
-   logic tmp10 = !tmp00;
-   logic tmp11 = !tmp01;
+   assign  tmp00 = rx_pair[0] ^ 1'b0;
+   assign  tmp01 = rx_pair[1] ^ 1'b1;
+   assign  tmp10 = !tmp00;
+   assign  tmp11 = !tmp01;
 
    assign path_0_bmc = {tmp00 ^ tmp01, tmp00 & tmp01};
    assign path_1_bmc = {tmp10 ^ tmp11, tmp10 & tmp11};
@@ -45,10 +45,10 @@ module bmc2		  // branch metric computation, inverted rx pair
 
 /* Fill in the guts per BMC instructions
 */
-   logic tmp00 = rx_pair[0];
-   logic tmp01 = !rx_pair[1];
-   logic tmp10 = !tmp00;
-   logic tmp11 = !tmp01;
+   assign  tmp00 = rx_pair[0] ^ 1'b0;
+   assign  tmp01 = rx_pair[1] ^ 1'b1;
+   assign  tmp10 = !tmp00;
+   assign  tmp11 = !tmp01;
 
    assign path_0_bmc = {tmp00 ^ tmp01, tmp00 & tmp01};
    assign path_1_bmc = {tmp10 ^ tmp11, tmp10 & tmp11};
@@ -62,10 +62,10 @@ module bmc3		  // branch metric computation, inverted rx pair
 
 /* Fill in the guts per BMC instructions
 */
-   logic tmp00 = rx_pair[0];
-   logic tmp01 = rx_pair[1];
-   logic tmp10 = !tmp00;
-   logic tmp11 = !tmp01;
+   assign  tmp00 = rx_pair[0] ^ 1'b0;
+   assign  tmp01 = rx_pair[1] ^ 1'b0;
+   assign  tmp10 = !tmp00;
+   assign  tmp11 = !tmp01;
 
    assign path_0_bmc = {tmp00 ^ tmp01, tmp00 & tmp01};
    assign path_1_bmc = {tmp10 ^ tmp11, tmp10 & tmp11};
@@ -79,10 +79,10 @@ module bmc4		  // branch metric computation
 
 /* Fill in the guts per BMC instructions
 */
-   logic tmp00 = rx_pair[0];
-   logic tmp01 = rx_pair[1];
-   logic tmp10 = !tmp00;
-   logic tmp11 = !tmp01;
+   assign  tmp00 = rx_pair[0] ^ 1'b0;
+   assign  tmp01 = rx_pair[1] ^ 1'b0;
+   assign  tmp10 = !tmp00;
+   assign  tmp11 = !tmp01;
 
    assign path_0_bmc = {tmp00 ^ tmp01, tmp00 & tmp01};
    assign path_1_bmc = {tmp10 ^ tmp11, tmp10 & tmp11};
@@ -96,10 +96,10 @@ module bmc5		  // branch metric computation, inverted rx pair
 
 /* Fill in the guts per BMC instructions
 */
-   logic tmp00 = rx_pair[0];
-   logic tmp01 = !rx_pair[1];
-   logic tmp10 = !tmp00;
-   logic tmp11 = !tmp01;
+   assign  tmp00 = rx_pair[0] ^ 1'b0;
+   assign  tmp01 = !rx_pair[1] ^ 1'b1;
+   assign  tmp10 = !tmp00;
+   assign  tmp11 = !tmp01;
 
    assign path_0_bmc = {tmp00 ^ tmp01, tmp00 & tmp01};
    assign path_1_bmc = {tmp10 ^ tmp11, tmp10 & tmp11};
@@ -113,10 +113,10 @@ module bmc6		  // branch metric computation, inverted rx pair
 
 /* Fill in the guts per BMC instructions
 */
-   logic tmp00 = rx_pair[0];
-   logic tmp01 = !rx_pair[1];
-   logic tmp10 = !tmp00;
-   logic tmp11 = !tmp01;
+   assign  tmp00 = rx_pair[0] ^ 1'b0;
+   assign  tmp01 = !rx_pair[1] ^ 1'b1;
+   assign  tmp10 = !tmp00;
+   assign  tmp11 = !tmp01;
 
    assign path_0_bmc = {tmp00 ^ tmp01, tmp00 & tmp01};
    assign path_1_bmc = {tmp10 ^ tmp11, tmp10 & tmp11};
@@ -130,10 +130,10 @@ module bmc7		  // branch metric computation
 
 /* Fill in the guts per BMC instructions
 */
-   logic tmp00 = rx_pair[0];
-   logic tmp01 = rx_pair[1];
-   logic tmp10 = !tmp00;
-   logic tmp11 = !tmp01;
+    assign tmp00 = rx_pair[0] ^ 1'b0;
+    assign tmp01 = rx_pair[1] ^ 1'b0;
+    assign tmp10 = !tmp00;
+    assign tmp11 = !tmp01;
 
    assign path_0_bmc = {tmp00 ^ tmp01, tmp00 & tmp01};
    assign path_1_bmc = {tmp10 ^ tmp11, tmp10 & tmp11};
