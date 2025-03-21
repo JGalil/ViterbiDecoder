@@ -6,12 +6,17 @@ module mem					(
    input         [9:0]    addr,
    input                  d_i,		// data
    output logic           d_o);
-memory core itself   
+// memory core itself   
    logic                  mem   [1024];
 
-   always @ (posedge clk) 
+always @ (posedge clk) begin
 /*
    write synchronously to memory core if enabled
    read synchronously at all times (equiv. to DFF at mem data out)
-*/      
+*/   
+   if(wr)
+      mem[addr] <=d_i;
+      d_o <= mem[addr];
+
+end
 endmodule
