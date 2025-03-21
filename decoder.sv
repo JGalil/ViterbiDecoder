@@ -352,7 +352,12 @@ module decoder
 
 //Trace back module operation
 
-   always @(posedge clk)
+   always @ (posedge clk) begin
+      mem_bank_Q1 <= mem_bank;
+   end
+   always @ (posedge clk) begin
+      mem_bank_Q2 <= mem_bank_Q1;
+   end
          
 /* create mem_bank, mem_bank_Q1, mem_bank_Q2 pipeline */
 
@@ -489,15 +494,17 @@ module decoder
    always @ (posedge clk) begin
 
       // if !mem_bank_Q3
-         if(!mem_bank_Q3)
+         if(!mem_bank_Q3) begin
          
             addr_disp_mem_0   <= rd_mem_counter_disp; 
             addr_disp_mem_1   <= wr_mem_counter_disp;
+         end
    
      //  else:	 swap rd and wr
-         else
+         else begin
             addr_disp_mem_0 <= wr_mem_counter_disp;
             addr_disp_mem_1 <= rd_mem_counter_disp; 
+         end
    end
 
    always @ (posedge clk) 	 begin
@@ -514,9 +521,9 @@ module decoder
 
    always @ (posedge clk) begin
       if(!mem_bank_Q5)
-         d_out <= d_o_disp_mem_i;
+         d_out <= d_o_disp_mem_0;
       else
-         d_out <= d_o_disp_mem_1;
+         d_out <= d_o_disp_mem_i;
    end
 
 endmodule
