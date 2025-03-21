@@ -11,8 +11,8 @@ module bmc0		  // branch metric computation
 
 /* Fill in the guts per BMC instructions
 */
-   logic tmp00 = rx_pair[0];
-   logic tmp01 = rx_pair[1];
+   logic tmp00 = (rx_pair[0] ^ 1'b0);
+   logic tmp01 = (rx_pair[1] ^ 1'b0);
    logic tmp10 = !tmp00;
    logic tmp11 = !tmp01;
 
