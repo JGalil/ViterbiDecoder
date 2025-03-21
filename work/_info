@@ -11,7 +11,7 @@ cModel Technology
 dC:/Users/kbn73/Downloads
 vACS
 Z0 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-Z1 !s110 1742529985
+Z1 !s110 1742536513
 !i10b 1
 !s100 UNX[mlDbDnd3G:D@LSe]S3
 Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
@@ -22,13 +22,13 @@ Z4 dC:/Users/kbn73/OneDrive/Documents/ViterbiDecoder
 Z5 w1742521573
 8C:/Users/kbn73/OneDrive/Documents/ViterbiDecoder/ACS.sv
 FC:/Users/kbn73/OneDrive/Documents/ViterbiDecoder/ACS.sv
-!i122 0
+!i122 104
 L0 1 39
 Z6 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z7 !s108 1742529985.000000
+Z7 !s108 1742536513.000000
 !s107 C:/Users/kbn73/OneDrive/Documents/ViterbiDecoder/ACS.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/kbn73/OneDrive/Documents/ViterbiDecoder/ACS.sv|
 !i113 1
@@ -48,7 +48,7 @@ R4
 Z10 w1742529183
 Z11 8C:/Users/kbn73/OneDrive/Documents/ViterbiDecoder/bmc0.sv
 Z12 FC:/Users/kbn73/OneDrive/Documents/ViterbiDecoder/bmc0.sv
-!i122 1
+!i122 105
 L0 6 16
 R6
 r1
@@ -73,7 +73,7 @@ R4
 R10
 R11
 R12
-!i122 1
+!i122 105
 L0 23 16
 R6
 r1
@@ -98,7 +98,7 @@ R4
 R10
 R11
 R12
-!i122 1
+!i122 105
 L0 40 16
 R6
 r1
@@ -123,7 +123,7 @@ R4
 R10
 R11
 R12
-!i122 1
+!i122 105
 L0 57 16
 R6
 r1
@@ -148,7 +148,7 @@ R4
 R10
 R11
 R12
-!i122 1
+!i122 105
 L0 74 16
 R6
 r1
@@ -173,7 +173,7 @@ R4
 R10
 R11
 R12
-!i122 1
+!i122 105
 L0 91 16
 R6
 r1
@@ -198,7 +198,7 @@ R4
 R10
 R11
 R12
-!i122 1
+!i122 105
 L0 108 16
 R6
 r1
@@ -223,7 +223,7 @@ R4
 R10
 R11
 R12
-!i122 1
+!i122 105
 L0 125 16
 R6
 r1
@@ -248,7 +248,7 @@ R4
 w1742528438
 8C:/Users/kbn73/OneDrive/Documents/ViterbiDecoder/decoder.sv
 FC:/Users/kbn73/OneDrive/Documents/ViterbiDecoder/decoder.sv
-!i122 2
+!i122 106
 L0 1 529
 R6
 r1
@@ -257,6 +257,31 @@ r1
 R7
 !s107 C:/Users/kbn73/OneDrive/Documents/ViterbiDecoder/decoder.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/kbn73/OneDrive/Documents/ViterbiDecoder/decoder.sv|
+!i113 1
+R8
+R9
+vencoder
+R0
+R1
+!i10b 1
+!s100 XiG1m0]98z;ZZE5>k]Zb^0
+R2
+IM?4AGUl]Yo<H@<C;enScj0
+R3
+S1
+R4
+w1742535404
+8C:\Users\kbn73\OneDrive\Documents\ViterbiDecoder\encoder.sv
+FC:\Users\kbn73\OneDrive\Documents\ViterbiDecoder\encoder.sv
+!i122 107
+L0 2 121
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:\Users\kbn73\OneDrive\Documents\ViterbiDecoder\encoder.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:\Users\kbn73\OneDrive\Documents\ViterbiDecoder\encoder.sv|
 !i113 1
 R8
 R9
@@ -273,7 +298,7 @@ R4
 R5
 8C:/Users/kbn73/OneDrive/Documents/ViterbiDecoder/encoder_tb.sv
 FC:/Users/kbn73/OneDrive/Documents/ViterbiDecoder/encoder_tb.sv
-!i122 3
+!i122 108
 L0 1 65
 R6
 r1
@@ -287,7 +312,7 @@ R8
 R9
 vmem
 R0
-Z15 !s110 1742529986
+R1
 !i10b 1
 !s100 5G0JRTWZk?>[AaahKRnH22
 R2
@@ -298,7 +323,7 @@ R4
 R5
 8C:/Users/kbn73/OneDrive/Documents/ViterbiDecoder/mem_8x1024.sv
 FC:/Users/kbn73/OneDrive/Documents/ViterbiDecoder/mem_8x1024.sv
-!i122 5
+!i122 110
 L0 3 22
 R6
 r1
@@ -323,7 +348,7 @@ R4
 R5
 8C:/Users/kbn73/OneDrive/Documents/ViterbiDecoder/mem_1x1024.sv
 FC:/Users/kbn73/OneDrive/Documents/ViterbiDecoder/mem_1x1024.sv
-!i122 4
+!i122 109
 L0 1 15
 R6
 r1
@@ -337,7 +362,7 @@ R8
 R9
 vtbu
 R0
-R15
+Z15 !s110 1742536514
 !i10b 1
 !s100 Xf]5eg>JH`F1BC[LnUmU]1
 R2
@@ -348,13 +373,13 @@ R4
 R5
 8C:/Users/kbn73/OneDrive/Documents/ViterbiDecoder/tbu.sv
 FC:/Users/kbn73/OneDrive/Documents/ViterbiDecoder/tbu.sv
-!i122 6
+!i122 111
 L0 2 42
 R6
 r1
 !s85 0
 31
-Z16 !s108 1742529986.000000
+R7
 !s107 C:/Users/kbn73/OneDrive/Documents/ViterbiDecoder/tbu.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/kbn73/OneDrive/Documents/ViterbiDecoder/tbu.sv|
 !i113 1
@@ -364,22 +389,22 @@ vviterbi_tx_rx
 R0
 R15
 !i10b 1
-!s100 Nk[`cN[TDCkGbHln22dBG2
+!s100 _YG^ZzU23SVZHBK@iFYeG2
 R2
-IG8laD9QaJHmK07HiL?LTi0
+IV_lM;]Ih8n@I6]`[K4Heo1
 R3
 S1
 R4
-R5
+w1742536241
 8C:/Users/kbn73/OneDrive/Documents/ViterbiDecoder/viterbi_tx_rx2.sv
 FC:/Users/kbn73/OneDrive/Documents/ViterbiDecoder/viterbi_tx_rx2.sv
-!i122 8
-L0 6 81
+!i122 113
+L0 6 82
 R6
 r1
 !s85 0
 31
-R16
+Z16 !s108 1742536514.000000
 !s107 C:/Users/kbn73/OneDrive/Documents/ViterbiDecoder/viterbi_tx_rx2.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/kbn73/OneDrive/Documents/ViterbiDecoder/viterbi_tx_rx2.sv|
 !i113 1
@@ -389,16 +414,16 @@ vviterbi_tx_rx_tb
 R0
 R15
 !i10b 1
-!s100 mkZn[BH1:czPVC[U^:hX03
+!s100 <ZmZi=hEkCGUl[d9bNYO03
 R2
-Io5ge>Y27=IjHS0ka1UNZ?0
+IQFA1B]^4=T?b<O>MSAMUL1
 R3
 S1
 R4
-R5
+w1742536153
 8C:/Users/kbn73/OneDrive/Documents/ViterbiDecoder/viterbi_tx_rx_tb.sv
 FC:/Users/kbn73/OneDrive/Documents/ViterbiDecoder/viterbi_tx_rx_tb.sv
-!i122 7
+!i122 112
 L0 2 93
 R6
 r1

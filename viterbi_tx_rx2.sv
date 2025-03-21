@@ -27,13 +27,13 @@ module viterbi_tx_rx #(parameter N=6) (
    always @ (posedge clk, negedge rst) 
       if(!rst) begin  
 	  $display("viterbi_tx_rx2.sv");
-         error_counter        <= 'd0;
+      error_counter        <= 'd0;
 //		 error_counterQ       <= 'd0;
          encoder_o_reg        <= 'b0;		 
 		 encoder_o_reg0       <= 'b0;
          enable_decoder_in    <= 'b0;
 		 enable_encoder_i_reg <= 'b0;
-		 word_ct              <= 'b0;
+		word_ct              <= 'b0;
       end
       else begin 
          enable_encoder_i_reg <= enable_encoder_i;  
@@ -64,10 +64,10 @@ module viterbi_tx_rx #(parameter N=6) (
         end
       end   
 
-																				   
+																			   
 // insert your convolutional encoder here
 // change port names and module name as necessary/desired
-   encoder2 encoder1	     (
+   encoder encoder1	     (
       .clk,
       .rst,
       .enable_i(enable_encoder_i), //_reg),

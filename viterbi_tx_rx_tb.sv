@@ -74,7 +74,7 @@ module viterbi_tx_rx_tb();
       #10000     encoder_i=  1'b0;
       #100	     encoder_i=  1'b1;
       #10000	 encoder_i=  1'b0;
-      #1000000  $display("word_count = %d",vtr.word_ct);                    	    
+      // #1000000  $display("word_count = %d",vtr.word_ct);                    	    
       for(j=0; j<256; j=j+1) 		// checker & scoreboard
         if(enc_i_hist[j]==dec_o_hist[j]) begin 
           $displayb("yaa! in = %b, out = %b, w_ct = %d, err = %b",
