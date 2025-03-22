@@ -5,7 +5,7 @@ module mem_disp (
     output logic d_o
 );
 
-logic mem [1023:0];
+logic mem [1024];
 
 always @ (posedge clk) begin
     if(wr)
