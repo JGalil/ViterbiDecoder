@@ -18,11 +18,18 @@ module bmc0		  // branch metric computation
    output   [1:0] path_0_bmc,
    output   [1:0] path_1_bmc);
 
+   logic tmp00;
+   logic tmp01;
+   logic tmp10;
+   logic tmp11;
 
-   logic tmp00 = rx_pair[0];
-   logic tmp01 = rx_pair[1];
-   logic tmp10 = !tmp00;
-   logic tmp11 = !tmp01;
+
+   always_comb begin
+   tmp00 = rx_pair[0];
+   tmp01 = rx_pair[1];
+   tmp10 = !tmp00;
+   tmp11 = !tmp01;
+   end
 
    assign path_0_bmc = {tmp00 ^ tmp01, tmp00 & tmp01};
    assign path_1_bmc = {tmp10 ^ tmp11, tmp10 & tmp11};
@@ -34,11 +41,17 @@ module bmc1		  // branch metric computation, inverted rx pair
    output   [1:0] path_0_bmc,
    output   [1:0] path_1_bmc);
 
+   logic tmp00;
+   logic tmp01;
+   logic tmp10;
+   logic tmp11;
 
-   logic tmp00 = rx_pair[0];
-   logic tmp01 = ~rx_pair[1];
-   logic tmp10 = !tmp00;
-   logic tmp11 = !tmp01;
+   always_comb begin
+   tmp00 = rx_pair[0];
+   tmp01 = ~rx_pair[1];
+   tmp10 = !tmp00;
+   tmp11 = !tmp01;
+   end
 
    assign path_0_bmc = {tmp00 ^ tmp01, tmp00 & tmp01};
    assign path_1_bmc = {tmp10 ^ tmp11, tmp10 & tmp11};
@@ -50,12 +63,17 @@ module bmc2		  // branch metric computation, inverted rx pair
    output   [1:0] path_0_bmc,
    output   [1:0] path_1_bmc);
 
+   logic tmp00;
+   logic tmp01;
+   logic tmp10;
+   logic tmp11;
 
-   logic tmp00 = rx_pair[0];
-   logic tmp01 = ~rx_pair[1];
-   logic tmp10 = !tmp00;
-   logic tmp11 = !tmp01;
-
+   always_comb begin
+   tmp00 = rx_pair[0];
+   tmp01 = ~rx_pair[1];
+   tmp10 = !tmp00;
+   tmp11 = !tmp01;
+   end
    assign path_0_bmc = {tmp00 ^ tmp01, tmp00 & tmp01};
    assign path_1_bmc = {tmp10 ^ tmp11, tmp10 & tmp11};
 endmodule
@@ -66,12 +84,17 @@ module bmc3		  // branch metric computation, inverted rx pair
    output   [1:0] path_0_bmc,
    output   [1:0] path_1_bmc);
 
+   logic tmp00;
+   logic tmp01;
+   logic tmp10;
+   logic tmp11;
 
-   logic tmp00 = rx_pair[0];
-   logic tmp01 = rx_pair[1];
-   logic tmp10 = !tmp00;
-   logic tmp11 = !tmp01;
-
+   always_comb begin
+   tmp00 = rx_pair[0];
+   tmp01 = rx_pair[1];
+   tmp10 = !tmp00;
+   tmp11 = !tmp01;
+   end
    assign path_0_bmc = {tmp00 ^ tmp01, tmp00 & tmp01};
    assign path_1_bmc = {tmp10 ^ tmp11, tmp10 & tmp11};
 endmodule
@@ -82,12 +105,17 @@ module bmc4		  // branch metric computation
    output   [1:0] path_0_bmc,
    output   [1:0] path_1_bmc);
 
+   logic tmp00;
+   logic tmp01;
+   logic tmp10;
+   logic tmp11;
 
-   logic tmp00 = rx_pair[0];
-   logic tmp01 = rx_pair[1];
-   logic tmp10 = !tmp00;
-   logic tmp11 = !tmp01;
-
+   always_comb begin
+   tmp00 = rx_pair[0];
+   tmp01 = rx_pair[1];
+   tmp10 = !tmp00;
+   tmp11 = !tmp01;
+   end
    assign path_0_bmc = {tmp00 ^ tmp01, tmp00 & tmp01};
    assign path_1_bmc = {tmp10 ^ tmp11, tmp10 & tmp11};
 endmodule
@@ -98,12 +126,17 @@ module bmc5		  // branch metric computation, inverted rx pair
    output   [1:0] path_0_bmc,
    output   [1:0] path_1_bmc);
 
+   logic tmp00;
+   logic tmp01;
+   logic tmp10;
+   logic tmp11;
 
-   logic tmp00 = rx_pair[0];
-   logic tmp01 = ~rx_pair[1];
-   logic tmp10 = !tmp00;
-   logic tmp11 = !tmp01;
-
+   always_comb begin
+   tmp00 = rx_pair[0];
+   tmp01 = ~rx_pair[1];
+   tmp10 = !tmp00;
+   tmp11 = !tmp01;
+   end
    assign path_0_bmc = {tmp00 ^ tmp01, tmp00 & tmp01};
    assign path_1_bmc = {tmp10 ^ tmp11, tmp10 & tmp11};
 endmodule
@@ -114,12 +147,17 @@ module bmc6  // branch metric computation, inverted rx pair
    output   [1:0] path_0_bmc,
    output   [1:0] path_1_bmc);
 
+   logic tmp00;
+   logic tmp01;
+   logic tmp10;
+   logic tmp11;
 
-   logic tmp00 = rx_pair[0];
-   logic tmp01 = ~rx_pair[1];
-   logic tmp10 = !tmp00;
-   logic tmp11 = !tmp01;
-
+   always_comb begin
+   tmp00 = rx_pair[0];
+   tmp01 = ~rx_pair[1];
+   tmp10 = !tmp00;
+   tmp11 = !tmp01;
+   end
    assign path_0_bmc = {tmp00 ^ tmp01, tmp00 & tmp01};
    assign path_1_bmc = {tmp10 ^ tmp11, tmp10 & tmp11};
 endmodule
@@ -130,12 +168,17 @@ module bmc7		  // branch metric computation
    output   [1:0] path_0_bmc,
    output   [1:0] path_1_bmc);
 
+   logic tmp00;
+   logic tmp01;
+   logic tmp10;
+   logic tmp11;
 
-   logic tmp00 = rx_pair[0];
-   logic tmp01 = rx_pair[1];
-   logic tmp10 = !tmp00;
-   logic tmp11 = !tmp01;
-
+   always_comb begin
+   tmp00 = rx_pair[0];
+   tmp01 = rx_pair[1];
+   tmp10 = !tmp00;
+   tmp11 = !tmp01;
+   end
    assign path_0_bmc = {tmp00 ^ tmp01, tmp00 & tmp01};
    assign path_1_bmc = {tmp10 ^ tmp11, tmp10 & tmp11};
 endmodule

@@ -21,6 +21,9 @@ module tbu
 
 
 always @(posedge clk or negedge rst) begin
+      selection_buf  <= selection;
+      wr_en          <= wr_en_reg;
+      d_o            <= d_o_reg;
       if (!rst) begin
          pstate <= 3'b000;
       end else if (!enable) begin
@@ -30,26 +33,13 @@ always @(posedge clk or negedge rst) begin
       end
    end
 
- 
-   always @(posedge clk)    begin
-      selection_buf  <= selection;
-      wr_en          <= wr_en_reg;
-      d_o            <= d_o_reg;
-   end
-   always @(posedge clk, negedge rst) begin
-      if(!rst) begin
-         pstate   <= 3'b000;
-      end
-      else if(!enable) begin
-         pstate   <= 3'b000;
-      end
-      else begin
-         pstate   <= nstate;
-      end
-   end
-
 
 always_comb begin
+   nstate = pstate;
+   wr_en_reg = 1'b0;
+   d_o_reg = 1'b0;
+
+
    case(pstate)
    3'b000: 
       if(selection == 1'b0)begin
@@ -67,8 +57,6 @@ always_comb begin
             1'b1: nstate = 3'b001;
          endcase
       end
-      
-
 
     3'b001: 
       if(selection == 1'b0) begin
