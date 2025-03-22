@@ -165,7 +165,7 @@ module decoder
          validity          <= 8'b1;
          selection         <= 8'b0;
          for(int i = 0; i < 8; i++) begin
-            path_cost[i] = 0;
+            path_cost[i] = 8'd0;
          end
 /* clear all 8 path costs
          path_cost[i]      <= 8'd0;
@@ -175,7 +175,7 @@ module decoder
          validity          <= 8'b1;
          selection         <= 8'b0;
          for(int i = 0; i < 8; i++) begin
-            path_cost[i] = 0;
+            path_cost[i] = 8'd0;
          end
 /* clear all 8 path costs
          path_cost[i]      <= 8'd0;
@@ -224,7 +224,7 @@ module decoder
 
    always @ (posedge clk, negedge rst) begin
       if(!rst)
-         rd_mem_counter <= 'b1111111111;//-1 how do you handle this in 10 bit binary?
+         rd_mem_counter <= 10'b1111111111;//-1 how do you handle this in 10 bit binary?
       else if(enable)
          rd_mem_counter <= rd_mem_counter - 10'd1;
    end
@@ -234,8 +234,8 @@ module decoder
          mem_bank <= 2'b0;
       else begin
          /*if(wr_mem_counter = -1  fill in the guts*/
-         if(wr_mem_counter == -1)
-               mem_bank <= mem_bank + 2'b1;
+         if(wr_mem_counter == 10'b1111111111)
+               mem_bank <= mem_bank + 2'b01;
       end
 
    always @ (posedge clk)    begin
