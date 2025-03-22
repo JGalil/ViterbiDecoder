@@ -1,3 +1,4 @@
+
 module decoder
 (
    input             clk,
@@ -126,7 +127,7 @@ module decoder
    bmc6   bmc6_inst(d_in,bmc6_path_0_bmc,bmc6_path_1_bmc);
    bmc7   bmc7_inst(d_in,bmc7_path_0_bmc,bmc7_path_1_bmc);
 /* K=0,1,...7
-*/
+
 
 
 //Add Compare Select Modules
@@ -224,7 +225,7 @@ module decoder
 
    always @ (posedge clk, negedge rst) begin
       if(!rst)
-         rd_mem_counter <= 10'b1111111111;//-1 how do you handle this in 10 bit binary?
+         rd_mem_counter <= 10'd1023;//-1 how do you handle this in 10 bit binary?
       else if(enable)
          rd_mem_counter <= rd_mem_counter - 10'd1;
    end
@@ -234,8 +235,8 @@ module decoder
          mem_bank <= 2'b0;
       else begin
          /*if(wr_mem_counter = -1  fill in the guts*/
-         if(wr_mem_counter == 10'b1111111111)
-               mem_bank <= mem_bank + 2'b01;
+         if(wr_mem_counter == 10'd1023)
+               mem_bank <= mem_bank + 10'd1;
       end
 
    always @ (posedge clk)    begin
@@ -246,10 +247,7 @@ module decoder
    end
 
    always @ (posedge clk)     begin
-      wr_mem_A <= 0;
-      wr_mem_B <= 0;
-      wr_mem_C <= 0;
-      wr_mem_D <= 0;
+
       case(mem_bank)
          2'b00:         begin
             addr_mem_A        <= wr_mem_counter;
@@ -314,7 +312,7 @@ module decoder
 
    mem trelis_mem_A
    (
-      .clk(clk),
+      .clk,
       .wr(wr_mem_A),
       .addr(addr_mem_A),
       .d_i(d_in_mem_A),
@@ -323,7 +321,7 @@ module decoder
 
    mem trelis_mem_B
    (
-      .clk(clk),
+      .clk,
       .wr(wr_mem_B),
       .addr(addr_mem_B),
       .d_i(d_in_mem_B),
@@ -341,7 +339,7 @@ module decoder
 
    mem trelis_mem_D
    (
-      .clk(clk),
+      .clk,
       .wr(wr_mem_D),
       .addr(addr_mem_D),
       .d_i(d_in_mem_D),
@@ -447,6 +445,8 @@ module decoder
 
 //Display Memory modules Instantioation
 //   d_in_disp_mem_K   =  d_o_tbu_K;  K=0,1
+assign d_in_disp_mem_0 = d_o_tbu_0;
+assign d_in_disp_mem_1 = d_o_tbu_1;
 
   mem_disp   disp_mem_0(
       .clk              ,
