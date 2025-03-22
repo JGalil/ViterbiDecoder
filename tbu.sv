@@ -18,29 +18,38 @@ module tbu
 
    logic         selection_buf;
 
+
+
+always @(posedge clk or negedge rst) begin
+      if (!rst) begin
+         pstate <= 3'b000;
+      end else if (!enable) begin
+         pstate <= 3'b000;
+      end else begin
+         pstate <= nstate;
+      end
+   end
+
+ 
    always @(posedge clk)    begin
       selection_buf  <= selection;
       wr_en          <= wr_en_reg;
       d_o            <= d_o_reg;
    end
    always @(posedge clk, negedge rst) begin
-      if(!rst)
+      if(!rst) begin
          pstate   <= 3'b000;
-      else if(!enable)
+      end
+      else if(!enable) begin
          pstate   <= 3'b000;
-      else if(selection_buf && !selection)
-         pstate   <= 3'b000;
-      else
+      end
+      else begin
          pstate   <= nstate;
+      end
    end
 
-/*  combinational logic drives:
-wr_en_reg, d_o_reg, nstate (next state)
-from selection, d_in_1[pstate], d_in_0[pstate]
-See assignment text for details
-*/
 
-always @(posedge clk) begin
+always_comb begin
    case(pstate)
    3'b000: 
       if(selection == 1'b0)begin
@@ -191,4 +200,13 @@ always @(posedge clk) begin
 
 end
 
+
+
 endmodule
+
+
+/*  combinational logic drives:
+wr_en_reg, d_o_reg, nstate (next state)
+from selection, d_in_1[pstate], d_in_0[pstate]
+See assignment text for details
+*/

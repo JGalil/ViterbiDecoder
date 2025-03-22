@@ -126,7 +126,7 @@ module decoder
    bmc5   bmc5_inst(d_in,bmc5_path_0_bmc,bmc5_path_1_bmc);
    bmc6   bmc6_inst(d_in,bmc6_path_0_bmc,bmc6_path_1_bmc);
    bmc7   bmc7_inst(d_in,bmc7_path_0_bmc,bmc7_path_1_bmc);
-/* K=0,1,...7
+/* K=0,1,...7 */
 
 
 

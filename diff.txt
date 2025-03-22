@@ -1,0 +1,55 @@
+1d0
+< 
+129,130c128,129
+< /* K=0,1,...7 */
+< 
+---
+> /* K=0,1,...7
+> */
+146,151c145
+<    assign selection_nets = {ACS0_selection,
+<                            ACS1_selection,
+<                            ACS2_selection,
+<                            ACS3_selection,
+<                            ACS4_selection,
+<                            ACS5_selection,
+---
+>    assign selection_nets = {ACS7_selection,
+153c147,152
+<                            ACS7_selection};
+---
+>                            ACS5_selection,
+>                            ACS4_selection,
+>                            ACS3_selection,
+>                            ACS2_selection,
+>                            ACS1_selection,
+>                            ACS0_selection};
+155,160c154
+<    assign validity_nets = {ACS0_valid_o,
+<                            ACS1_valid_o,
+<                            ACS2_valid_o,
+<                            ACS3_valid_o,
+<                            ACS4_valid_o,
+<                            ACS5_valid_o,
+---
+>    assign validity_nets = {ACS7_valid_o,
+162c156,161
+<                            ACS7_valid_o};
+---
+>                            ACS5_valid_o,
+>                            ACS4_valid_o,
+>                            ACS3_valid_o,
+>                            ACS2_valid_o,
+>                            ACS1_valid_o,
+>                            ACS0_valid_o};
+333c332
+<       .clk(clk),
+---
+>       .clk,
+448,449c447,449
+< assign d_in_disp_mem_0 = d_o_tbu_0;
+< assign d_in_disp_mem_1 = d_o_tbu_1;
+---
+> 
+>   assign d_in_disp_mem_0 = d_o_tbu_0;
+>   assign d_in_disp_mem_1 = d_o_tbu_1;

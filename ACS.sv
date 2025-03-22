@@ -20,7 +20,7 @@ module ACS		                        // add-compare-select
 assign path_cost_0 = path_0_bmc + path_0_pmc;
 assign path_cost_1 = path_1_bmc + path_1_pmc;
 //determine which path chosen on selection high, later
-assign path_cost = (valid_o ? (selection ? path_cost_1 : path_cost_0) : 7'd0);
+assign path_cost = (valid_o ? (selection ? path_cost_1 : path_cost_0) : 8'd0);
 
 always_comb begin
    valid_o = 1'b1;
@@ -31,8 +31,7 @@ always_comb begin
       end
       2'b01: selection = 1'b1;
       2'b10: selection = 1'b0;
-      2'b11: selection = (path_cost_0 > path_cost_1) ? 1'b1:1'b0;
-      default: selection = 1'b0;
+      2'b11: selection = (path_cost_0 > path_cost_1) ? 1'b1 : 1'b0;
    endcase
 end
 

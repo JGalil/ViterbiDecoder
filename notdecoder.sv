@@ -1,4 +1,4 @@
-module decoder
+module notdecoder
 (
    input             clk,
    input             rst,
