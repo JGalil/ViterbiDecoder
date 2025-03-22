@@ -13,10 +13,10 @@ module viterbi_tx_rx_tb();
 // this module contains conv. encode, channel, and Vit decode
    viterbi_tx_rx vtr(
       .clk,
-      .rst,
-      .encoder_i,		    // original data
-      .enable_encoder_i,
-      .decoder_o    );		// decoded data
+      .rst(rst),
+      .encoder_i(encoder_i),		    // original data
+      .enable_encoder_i(enable_encoder_i),
+      .decoder_o(decoder_o)    );		// decoded data
 
    always begin
       #50  clk   = 'b1;

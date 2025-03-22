@@ -12,4 +12,4 @@ always @ (posedge clk) begin
     mem[addr] <= d_i;
     d_o <= mem[addr];
 end
-endmodule: mem_disp
+endmodule: mem_disp 
