@@ -31,7 +31,7 @@ module bmc1		  // branch metric computation, inverted rx pair
    assign  tmp00 = rx_pair[0] ^ 1'b0;
    assign  tmp01 = rx_pair[1] ^ 1'b1;
    assign  tmp10 = ~tmp00;
-   assign  tmp11 = ~Stmp01;
+   assign  tmp11 = ~tmp01;
 
    assign path_0_bmc = {tmp00 ^ tmp01, tmp00 & tmp01};
    assign path_1_bmc = {tmp10 ^ tmp11, tmp10 & tmp11};
