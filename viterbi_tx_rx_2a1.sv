@@ -11,7 +11,7 @@ module viterbi_tx_rx #(parameter N=4) (
    output   decoder_o);
 
    wire  [1:0] encoder_o;  // connects encoder to decoder
-/*
+
    int           error_counter,	err_trig,
                  bad_bit_ct,
                  word_ct;
@@ -59,7 +59,7 @@ module viterbi_tx_rx #(parameter N=4) (
         end
       end   
 
-*/																				   
+																			   
 // insert your convolutional encoder here
 // change port names and module name as necessary/desired
    encoder encoder1	     (

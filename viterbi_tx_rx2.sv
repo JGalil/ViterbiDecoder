@@ -3,6 +3,7 @@
 //  and Viterbi decoder
 // parameter N sets the channel bit error rate
 // this time, two errors in a row
+/*
 module viterbi_tx_rx #(parameter N=6) (
    input    clk,
    input    rst,
@@ -84,3 +85,4 @@ module viterbi_tx_rx #(parameter N=6) (
       .d_out  (decoder_o)   );
 
 endmodule
+*/
