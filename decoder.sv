@@ -143,23 +143,23 @@ module decoder
    // selection_nets  = // concatenate ACS7 ,,, ACS0 _selections 
    // validity_nets   = // same for ACSK_valid_os 
 
-   assign selection_nets = {ACS0_selection,
-                           ACS1_selection,
-                           ACS2_selection,
-                           ACS3_selection,
-                           ACS4_selection,
-                           ACS5_selection,
+   assign selection_nets = {ACS7_selection,
                            ACS6_selection,
-                           ACS7_selection};
+                           ACS5_selection,
+                           ACS4_selection,
+                           ACS3_selection,
+                           ACS2_selection,
+                           ACS1_selection,
+                           ACS0_selection};
 
-   assign validity_nets = {ACS0_valid_o,
-                           ACS1_valid_o,
-                           ACS2_valid_o,
-                           ACS3_valid_o,
-                           ACS4_valid_o,
-                           ACS5_valid_o,
+   assign validity_nets = {ACS7_valid_o,
                            ACS6_valid_o,
-                           ACS7_valid_o};
+                           ACS5_valid_o,
+                           ACS4_valid_o,
+                           ACS3_valid_o,
+                           ACS2_valid_o,
+                           ACS1_valid_o,
+                           ACS0_valid_o};
 
    always @ (posedge clk, negedge rst) begin
       if(!rst)  begin

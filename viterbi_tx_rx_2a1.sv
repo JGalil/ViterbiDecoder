@@ -62,7 +62,7 @@ module viterbi_tx_rx #(parameter N=4) (
 																			   
 // insert your convolutional encoder here
 // change port names and module name as necessary/desired
-   encoder encoder1	     (
+   encoder2 encoder1	     (
       .clk,
       .rst,
       .enable_i(enable_encoder_i), //_reg),

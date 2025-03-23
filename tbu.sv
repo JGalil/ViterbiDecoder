@@ -35,10 +35,7 @@ always @(posedge clk or negedge rst) begin
 
 
 always_comb begin
-   nstate = pstate;
-   wr_en_reg = 1'b0;
-   d_o_reg = 1'b0;
-
+   
 
    case(pstate)
    3'b000: 
