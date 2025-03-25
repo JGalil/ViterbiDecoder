@@ -3,7 +3,7 @@
 //  and Viterbi decoder
 // parameter N sets the channel bit error rate
 // this time, bit[0] every 16 clocks
-module viterbi_tx_rx #(parameter N=5) (
+module viterbi_tx_rx #(parameter N=4) (
    input    clk,
    input    rst,
    input    encoder_i,
@@ -41,13 +41,15 @@ module viterbi_tx_rx #(parameter N=5) (
          encoder_o_reg0    <= encoder_o;
 // word_ct[N-1:0] generates strings of 2**N consecutive errors
          word_ct              <= word_ct + 1;	err_trig = 16'hABCD;		
-       if ((word_ct < 256) && ($random % 32 == 0)) begin
-    error_counter <= error_counter + 1;
-    err_inj <= 2'b11;  // Invert both bit[1] and bit[0]
+       if ((word_ct < 256) && (word_ct[N-1:0]=='1)) begin
+ error_counter <= error_counter + 1;
+    err_inj <= 2'b01;  // Invert both bit[1] and bit[0]
     encoder_o_reg <= encoder_o ^ err_inj;
 end else begin
+   error_counter <= error_counter + 1;
     err_inj <= 2'b00;
-    encoder_o_reg <= encoder_o;
+    encoder_o_reg <= encoder_o ^ err_inj;
+
 end
         if(word_ct<256) begin
           bad_bit_ct  <= bad_bit_ct + (encoder_o_reg0[1]^encoder_o_reg[1])
