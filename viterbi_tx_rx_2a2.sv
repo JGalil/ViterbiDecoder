@@ -3,7 +3,7 @@
 //  and Viterbi decoder
 // parameter N sets the channel bit error rate
 // this time, bit[0] every 16 clocks
-module viterbi_tx_rx #(parameter N=3) (
+module viterbi_tx_rx2a2 #(parameter N=3) (
    input    clk,
    input    rst,
    input    encoder_i,
