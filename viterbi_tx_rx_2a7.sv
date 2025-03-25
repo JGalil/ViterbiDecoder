@@ -41,14 +41,14 @@ module viterbi_tx_rx2a7 #(parameter N=5) (
          encoder_o_reg0    <= encoder_o;
 // word_ct[N-1:0] generates strings of 2**N consecutive errors
          word_ct              <= word_ct + 1;	err_trig = 16'hABCD;		
-       if ((word_ct < 256) && (word_ct[N-1:1]=='0)) begin
-    error_counter <= error_counter + 1;
-    err_inj <= 2'b01;  // Invert both bit[1] and bit[0]
-    encoder_o_reg <= encoder_o ^ err_inj;
-end else begin
-    err_inj <= 2'b00; 
-    encoder_o_reg <= encoder_o;
-end
+         if ((word_ct < 256) && (word_ct[N-1:2]=='0)) begin
+            error_counter <= error_counter + 1;
+            err_inj <= 2'b10;  // Only invert bit[1]
+            encoder_o_reg <= encoder_o ^ err_inj;
+         end else begin
+            err_inj <= 2'b00;
+            encoder_o_reg <= encoder_o;
+         end
         if(word_ct<256) begin
           bad_bit_ct  <= bad_bit_ct + (encoder_o_reg0[1]^encoder_o_reg[1])
 		                      + (encoder_o_reg0[0]^encoder_o_reg[0]);

@@ -43,7 +43,7 @@ module viterbi_tx_rx2a1 #(parameter N=3) (
          word_ct              <= word_ct + 1;	err_trig = 16'hABCD;		
        if ((word_ct < 256) && (word_ct[N-1:0]=='0)) begin
     error_counter <= error_counter + 1;
-    err_inj <= 2'b01;  // Invert both bit[1] and bit[0]
+    err_inj <= 2'b01;  // Only invert bit[0]
     encoder_o_reg <= encoder_o ^ err_inj;
 end else begin
     err_inj <= 2'b00;
